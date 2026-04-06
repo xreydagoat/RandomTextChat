@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Random Chat</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section class="hero-panel">
+      <div class="hero-copy">
+        <span class="badge">Dark Chat</span>
+        <h1>Random text chat</h1>
+        <p>Match with a stranger instantly, chat for 2 minutes, then move to the next connection.</p>
+      </div>
+      <div class="status-panel">
+        <div class="status-card online">
+          <span class="status-label">People online</span>
+          <strong id="onlineCount">0</strong>
+        </div>
+        <div class="status-card timer">
+          <span class="status-label">Time remaining</span>
+          <strong id="countdown">02:00</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="chat-panel">
+      <div class="chat-header">
+        <div>
+          <p class="chat-title">Connected with <span id="partnerName">finding someone...</span></p>
+          <p class="chat-subtitle" id="connectionStatus">Searching for a stranger...</p>
+        </div>
+        <button id="newMatchBtn" class="ghost-btn">New match</button>
+      </div>
+
+      <div class="chat-window" id="chatWindow">
+        <div class="connecting" id="connectingOverlay">
+          <div class="pulse-ring"></div>
+          <p>Connecting...</p>
+        </div>
+      </div>
+
+      <form class="chat-input" id="chatForm">
+        <input id="messageInput" type="text" placeholder="Type your message..." autocomplete="off" />
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
